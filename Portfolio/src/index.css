@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+/* Remove the invalid @plugin directive. DaisyUI should be configured in tailwind.config.js, not in CSS. */
+
+*{
+  font-family: sans-serif,Saira;
+}
+
+/* ✅ Global Theme Styles */
+
+/* for typing and blink animation /home */
+.typewriter{
+  display: inline-block;
+overflow: hidden;
+/* border-right: 0.10em solid teal; */
+white-space: nowrap;
+width: 0;
+ border-right: 3px solid #14b8a6; /* teal cursor */
+animation: typing 3s steps(25,end) forwards,blink-caret 1s step-end  infinite;
+}
+
+@keyframes typing{
+  from {width: 0;}
+  to {width: 18ch;}
+}
+@keyframes blink-caret{
+  0%, 100% {border-color: transparent;}
+  50% {border-color: teal;}
+}
+
+/* ✅ Apply global theme */
+body {
+  font-family: 'Saira', 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ✅ Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* ✅ Buttons and links */
+button, .btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ✅ Custom utilities */
+/* .card {
+  @apply p-4 rounded-2xl shadow-md bg-white dark:bg-slate-800;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+} */
+.slick-slide > div{
+  margin: 0 10px;
+}
+.slick-dots {
+  bottom: -30px; /* adjust as needed */
+  z-index: 10;
+
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  background-color: teal;
+}
