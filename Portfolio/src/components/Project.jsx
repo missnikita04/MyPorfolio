@@ -70,7 +70,7 @@ export default function Project() {
       {
       breakpoint: 1280, // large desktop
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         centerMode: false,
       },
     },
@@ -78,7 +78,7 @@ export default function Project() {
   {
     breakpoint: 1024,
     settings: {
-      slidesToShow: 2,
+      slidesToShow: 1,
       centerMode: false,
     },
   },
