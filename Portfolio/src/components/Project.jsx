@@ -45,7 +45,7 @@ export default function Project() {
     dots: true, //we want dots
     infinite: true, //how mani time scroll we set infinite time
     speed: 500, //speedd of scrolling
-    slidesToShow: 2, ///how manu slide show in ui
+    slidesToShow: 1, ///how manu slide show in ui
     slidesToScroll: 1, //how manu slide scroll
     centerPadding: "0px",
     nextArrow: <NextArrow />,
@@ -70,7 +70,7 @@ export default function Project() {
     responsive: [
  {
     breakpoint: 1280,
-    settings: { slidesToShow: 2, centerMode: false },
+    settings: { slidesToShow: 1, centerMode: false },
   },
   {
     breakpoint: 1024,
