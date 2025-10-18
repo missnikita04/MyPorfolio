@@ -1,14 +1,41 @@
-const mongoose=require('mongoose');
 
-const mongoURI='mongodb://127.0.0.1:27017/contactform';
-const ConnectToMongo=async()=>{
-    try{
-       await mongoose.connect(mongoURI, {
+// require('dotenv').config();
+// const mongoose = require('mongoose');
+
+// mongoose.connect(process.env.MONGODB_URI)
+//   .then(() => console.log('✅ Connected to MongoDB Atlas'))
+//   .catch((err) => console.error('❌ MongoDB connection error:', err));
+
+// const mongoose=require('mongoose');
+
+// // const mongoURI='mongodb://127.0.0.1:27017/contactform';
+// const ConnectToMongo=async()=>{
+//     try{
+//        await mongoose.connect(mongoURI, {
+//     });
+//     console.log("connected to mongodb atlas")
+//     }catch(err){
+//         console.log("not conected");
+//         process.exit(1);
+//     }
+// }
+// module.exports=ConnectToMongo;
+
+
+
+
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+const ConnectToMongo = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
     });
-    console.log("connected to mongodb")
-    }catch(err){
-        console.log("not conected");
-        process.exit(1);
-    }
-}
-module.exports=ConnectToMongo;
+    console.log('✅ Connected to MongoDB Atlas');
+  } catch (err) {
+    console.error('❌ MongoDB connection error:', err.message);
+    process.exit(1);
+  }
+};
+
+module.exports = ConnectToMongo;
