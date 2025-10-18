@@ -4,7 +4,12 @@ const app=express();
 const Route=require("../backend/Routes/User");
 
 const cors = require('cors');
-app.use(cors());
+const cors = require("cors");
+app.use(cors({
+  origin: "https://myporfoliofrontend.onrender.com", 
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 // Middleware to parse JSON body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
