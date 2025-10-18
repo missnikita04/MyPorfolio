@@ -18,7 +18,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://myporfolio-amzm.onrender.com", {
+      const response = await fetch("https://myporfolio-amzm.onrender.com/api/user/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
