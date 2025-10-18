@@ -7,7 +7,6 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -33,7 +32,7 @@ export default function ContactForm() {
           position: "top-center",
           autoClose: 3000,
         });
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", message: "" });
       } else {
         toast.error("❌ " + result.message, { position: "top-center" });
       }
@@ -57,7 +56,7 @@ export default function ContactForm() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {["name", "email", "subject"].map((field) => (
+          {["name", "email"].map((field) => (
             <div key={field}>
               <label className="block text-gray-700 font-medium mb-2 capitalize">
                 {field}

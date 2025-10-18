@@ -9,9 +9,9 @@ router.post("/Submit",async(req,res)=>{
     console.log("Incoming data:", req.body); // Debug
 
    try{
-     const {name,email,subject,message}=req.body;
+     const {name,email,message}=req.body;
   const data= await User.create({
-        name,email,subject,message
+        name,email,message
     });
      // Send response back
     res.status(201).json({

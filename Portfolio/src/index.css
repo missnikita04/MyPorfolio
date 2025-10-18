@@ -9,27 +9,21 @@
   font-family: sans-serif,Saira;
 }
 
+
+
+  /* @keyframes slideup {
+    0% { transform: translateY(0%); }
+    50% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+  }
+
+  .slideup {
+    animation: slideup 4s ease-in-out infinite;
+  } */
+
 /* ✅ Global Theme Styles */
 
 /* for typing and blink animation /home */
-.typewriter{
-  display: inline-block;
-overflow: hidden;
-/* border-right: 0.10em solid teal; */
-white-space: nowrap;
-width: 0;
- border-right: 3px solid #14b8a6; /* teal cursor */
-animation: typing 3s steps(25,end) forwards,blink-caret 1s step-end  infinite;
-}
-
-@keyframes typing{
-  from {width: 0;}
-  to {width: 18ch;}
-}
-@keyframes blink-caret{
-  0%, 100% {border-color: transparent;}
-  50% {border-color: teal;}
-}
 
 /* ✅ Apply global theme */
 body {
@@ -66,16 +60,16 @@ button:hover, .btn:hover {
 .container {
   @apply mx-auto px-4 sm:px-6 lg:px-8;
 } */
-.slick-slide > div{
+/* .slick-slide > div{
   margin: 0 10px;
 }
 .slick-dots {
   bottom: -30px; /* adjust as needed */
-  z-index: 10;
+  /* z-index: 10;
 
-}
+} */
 
-.slick-dots li button:before {
+/* .slick-dots li button:before {
   font-size: 12px;
   background-color: teal;
-}
+} */

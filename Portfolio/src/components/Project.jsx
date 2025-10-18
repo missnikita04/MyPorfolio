@@ -45,7 +45,7 @@ export default function Project() {
     dots: true, //we want dots
     infinite: true, //how mani time scroll we set infinite time
     speed: 500, //speedd of scrolling
-    slidesToShow: 2, ///how manu slide show in ui
+    slidesToShow: 1, ///how manu slide show in ui
     slidesToScroll: 1, //how manu slide scroll
     centerPadding: "0px",
     nextArrow: <NextArrow />,
@@ -53,11 +53,6 @@ export default function Project() {
      adaptiveHeight: true,  // <-- recalculates slide height on small screens
 
     //customize the dots color
-    customPaging: () => (
-<div className="w-4  h-3 p-3 overflow-hidden rounded-full bg-teal-600 opacity-60 hover:opacity-100 transition-all relative top-4"></div>
-    ),
-    dotsClass: "slick-dots custom-dots",
-    arrows: true, // make sure arrows are enabled
 
     // responsive: [
     //   { breakpoint: 1024, settings: { slidesToShow: 2 } },
@@ -70,11 +65,11 @@ export default function Project() {
     responsive: [
  {
     breakpoint: 1280,
-    settings: { slidesToShow: 2, centerMode: false },
+    settings: { slidesToShow: 1, centerMode: false },
   },
   {
     breakpoint: 1024,
-    settings: { slidesToShow: 2, centerMode: false },
+    settings: { slidesToShow: 1, centerMode: false },
   },
   {
     breakpoint: 768,
@@ -141,9 +136,9 @@ export default function Project() {
             })}
           </Slider>
           <div className='flex justify-center mt-10' >
-<button className=" !mt-3 !px-6 !py-2 !text-white !bg-teal-600 !rounded-lg !font-medium !border-2 !border-transparent hover:!bg-white  hover:!border-teal-500 hover:!text-gray-800 transition-colors duration-300">
+<a href="https://github.com/missnikita04 " target="_blank" className=" !mt-3 !px-6 !py-2 !text-white !bg-teal-600 !rounded-lg !font-medium !border-2 !border-transparent hover:!bg-white  hover:!border-teal-500 hover:!text-gray-800 transition-colors duration-300">
   See More
-</button>     
+</a>     
      </div>
         </div>
       </div>

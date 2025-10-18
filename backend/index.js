@@ -4,7 +4,6 @@ const app=express();
 const Route=require("../backend/Routes/User");
 
 const cors = require('cors');
-const cors = require("cors");
 app.use(cors({
   origin: "https://myporfoliofrontend.onrender.com", 
   methods: ["GET", "POST"],

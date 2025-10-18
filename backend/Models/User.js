@@ -10,12 +10,6 @@ const User=new Schema({
         
 
     } ,
-    subject:{
-         type:String,
-       
-
-    },
-
      message:{
          type:String,
        
