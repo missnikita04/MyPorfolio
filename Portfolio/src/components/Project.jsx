@@ -45,7 +45,7 @@ export default function Project() {
     dots: true, //we want dots
     infinite: true, //how mani time scroll we set infinite time
     speed: 500, //speedd of scrolling
-    slidesToShow: 3, ///how manu slide show in ui
+    slidesToShow: 2, ///how manu slide show in ui
     slidesToScroll: 1, //how manu slide scroll
     centerPadding: "0px",
     nextArrow: <NextArrow />,
@@ -70,7 +70,7 @@ export default function Project() {
       {
       breakpoint: 1280, // large desktop
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         centerMode: false,
       },
     },
@@ -78,12 +78,12 @@ export default function Project() {
   {
     breakpoint: 1024,
     settings: {
-      slidesToShow: 2,
+      slidesToShow: 1,
       centerMode: false,
     },
   },
   {
-    breakpoint: 640,
+    breakpoint: 768,
     settings: {
       slidesToShow: 1,
       centerMode: false, // Disable only on small screens
@@ -102,7 +102,7 @@ export default function Project() {
       >
 
     <div className="p-8 bg-white">
-      <div className=" w-full md:w-3/4 mx-auto my-20 px-4 relative">
+      <div className=" w-full mx-auto my-20 px-4 relative">
         <div className="relative">
           <h2 className="text-3xl font-bold text-center mb-10">
             My <span className="text-teal-600">Projects</span>
