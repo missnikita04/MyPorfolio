@@ -10,12 +10,12 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="fixed w-full z-50 bg-dark-100/90 backdrop-blur-sm py-4 px-8 shadow-lg">
+      <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-2 sm:py-3 px-4 sm:px-8 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <img className="md:w-64" src={assets.LogoImg} alt="logo..." />
           </div>
-          <div className=" hidden md:flex space-x-10">
+          <div className=" hidden md:flex space-x-8">
             <Link
               to="home"
               smooth={true} duration={800}
@@ -88,7 +88,7 @@ function Navbar() {
 
         {/* Mobile menus */}
         {showMenu && (
-          <div className="md:hidden mt-4 bg-gray-50 rounded-lg text-center justify-center h-1/2 p-4 flex flex-col space-y-4 hover:text-teal-600  hover:cursor-pointer hover:bg-white">
+          <div className="md:hidden mt-2 bg-gray-50 rounded-lg text-center justify-center h-1/2 p-4 flex flex-col space-y-3 hover:text-teal-600  hover:cursor-pointer hover:bg-white">
             <Link
             smooth={true} duration={900}
              offset={-80} 

@@ -45,7 +45,6 @@ export default function Project() {
     speed: 500, //speedd of scrolling
     slidesToShow: 3, ///how manu slide show in ui
     slidesToScroll: 1, //how manu slide scroll
-    centerMode: true,
     centerPadding: "0px",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -57,11 +56,38 @@ export default function Project() {
     dotsClass: "slick-dots custom-dots",
     arrows: true, // make sure arrows are enabled
 
+    // responsive: [
+    //   { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    //   { breakpoint: 640, settings: { slidesToShow: 1 } },
+    // ],
+    //  className:"p-20 bg-gray-50"\
+
+    // responsive card
+
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
-    ],
-    //  className:"p-20 bg-gray-50"
+      {
+      breakpoint: 1280, // large desktop
+      settings: {
+        slidesToShow: 3,
+        centerMode: true,
+      },
+    },
+
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+      centerMode: false,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
+      centerMode: false, // Disable only on small screens
+    },
+  },
+],
   };
   return (
      <motion.div
@@ -74,7 +100,7 @@ export default function Project() {
       >
 
     <div className="p-8 bg-white">
-      <div className="w-3/4 mx-auto my-20 px-4 relative">
+      <div className=" w-full md:w-3/4 mx-auto my-20 px-4 relative">
         <div className="relative">
           <h2 className="text-3xl font-bold text-center mb-10">
             My <span className="text-teal-600">Projects</span>
