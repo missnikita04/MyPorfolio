@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -17,13 +18,6 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-<<<<<<< HEAD
-      const response = await fetch("https://myporfolio-amzm.onrender.com/api/user/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-=======
       const response = await fetch(
         "https://myporfolio-amzm.onrender.com/api/user/submit",
         {
@@ -32,7 +26,6 @@ export default function ContactForm() {
           body: JSON.stringify(formData),
         }
       );
->>>>>>> a1df401 (chnages for sm screen)
 
       const result = await response.json();
       if (result.success) {
@@ -64,47 +57,22 @@ export default function ContactForm() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">Name</label>
-            <input
-              required
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-1"
-            />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">Email</label>
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-1"
-            />
-          </div>
-
-          {/* Subject */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-2">Subject</label>
-            <input
-              required
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-1"
-            />
-          </div>
+          {["name", "email", "subject"].map((field) => (
+            <div key={field}>
+              <label className="block text-gray-700 font-medium mb-2 capitalize">
+                {field}
+              </label>
+              <input
+                required
+                type={field === "email" ? "email" : "text"}
+                name={field}
+                placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
+                value={formData[field]}
+                onChange={handleChange}
+                className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-2"
+              />
+            </div>
+          ))}
 
           {/* Message */}
           <div>
@@ -116,7 +84,7 @@ export default function ContactForm() {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-1"
+              className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-2 resize-none"
             ></textarea>
           </div>
 
@@ -124,7 +92,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="mt-3 px-6 py-2 !text-white !bg-teal-600 rounded-lg font-medium border-2 !border-transparent hover:!bg-white hover:!border-teal-500 hover:!text-gray-800 !transition-colors duration-300"
+              className="mt-3 px-6 py-2 !text-white !bg-teal-600 rounded-lg font-medium border-2 border-transparent hover:!bg-white hover:!border-teal-500 hover:!text-gray-800 !transition-colors duration-300"
             >
               Send Message
             </button>
