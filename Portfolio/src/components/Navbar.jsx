@@ -13,7 +13,7 @@ function Navbar() {
       <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-2 sm:py-3 px-4 sm:px-8 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <img className="md:w-64" src={assets.LogoImg} alt="logo..." />
+            <img className=" w-30 md:w-64" src={assets.LogoImg} alt="logo..." />
           </div>
           <div className=" hidden md:flex space-x-8">
             <Link

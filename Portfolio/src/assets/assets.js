@@ -8,7 +8,7 @@ import projectImg4 from '../assets/bankit.png';
 import projectImg5 from '../assets/SPS.png';
 import projectImg6 from '../assets/Tic_tac.png';
 import projectImg7 from '../assets/GMN.png';
-import LogoImg from '../assets/logo1.jpg'
+import LogoImg from '../assets/logo2.jpg'
 
 import cv from "../assets/cv.pdf";
 
