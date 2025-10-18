@@ -1,6 +1,6 @@
 import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
 
-import profileImg from '../assets/profile.jpeg';
+import profileImg from '../assets/profile.jpg';
 import projectImg1 from '../assets/amrr.png';
 import projectImg2 from '../assets/MakePost.png';
 import projectImg3 from '../assets/marble.png';
@@ -8,7 +8,7 @@ import projectImg4 from '../assets/bankit.png';
 import projectImg5 from '../assets/SPS.png';
 import projectImg6 from '../assets/Tic_tac.png';
 import projectImg7 from '../assets/GMN.png';
-import LogoImg from '../assets/main.jpg';
+import LogoImg from '../assets/Main_logo.jpg'
 
 import cv from "../assets/cv.pdf";
 
