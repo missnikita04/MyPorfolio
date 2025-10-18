@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 function NextArrow(props) {
   const { onClick } = props;
   return (
+
+    // prev button 
     <div
       className="absolute top-1/2 right-[-40px] -translate-y-1/2 z-20 cursor-pointer"
       onClick={onClick}
@@ -51,7 +53,7 @@ export default function Project() {
 
     //customize the dots color
     customPaging: () => (
-<div className="w-4  h-3 p-2 overflow-hidden rounded-full bg-teal-600 opacity-60 hover:opacity-100 transition-all relative top-4"></div>
+<div className="w-4  h-3 p-3 overflow-hidden rounded-full bg-teal-600 opacity-60 hover:opacity-100 transition-all relative top-4"></div>
     ),
     dotsClass: "slick-dots custom-dots",
     arrows: true, // make sure arrows are enabled
@@ -69,7 +71,7 @@ export default function Project() {
       breakpoint: 1280, // large desktop
       settings: {
         slidesToShow: 3,
-        centerMode: true,
+        centerMode: false,
       },
     },
 
@@ -81,7 +83,7 @@ export default function Project() {
     },
   },
   {
-    breakpoint: 768,
+    breakpoint: 640,
     settings: {
       slidesToShow: 1,
       centerMode: false, // Disable only on small screens
