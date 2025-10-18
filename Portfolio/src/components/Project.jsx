@@ -74,7 +74,7 @@ export default function Project() {
   },
   {
     breakpoint: 1024,
-    settings: { slidesToShow: 2, centerMode: false },
+    settings: { slidesToShow: 1, centerMode: false },
   },
   {
     breakpoint: 768,
