@@ -50,6 +50,7 @@ export default function Project() {
     centerPadding: "0px",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+     adaptiveHeight: true,  // <-- recalculates slide height on small screens
 
     //customize the dots color
     customPaging: () => (
@@ -67,29 +68,22 @@ export default function Project() {
     // responsive card
 
     responsive: [
-      {
-      breakpoint: 1280, // large desktop
-      settings: {
-        slidesToShow: 2,
-        centerMode: false,
-      },
-    },
-
+ {
+    breakpoint: 1280,
+    settings: { slidesToShow: 2, centerMode: false },
+  },
   {
     breakpoint: 1024,
-    settings: {
-      slidesToShow: 1,
-      centerMode: false,
-    },
+    settings: { slidesToShow: 2, centerMode: false },
   },
   {
     breakpoint: 768,
-    settings: {
-      slidesToShow: 1,
-      centerMode: false, // Disable only on small screens
-    },
+    settings: { slidesToShow: 1, centerMode: false },
   },
-],
+  {
+    breakpoint: 640,
+    settings: { slidesToShow: 1, centerMode: false },
+  },],
   };
   return (
      <motion.div
@@ -102,7 +96,7 @@ export default function Project() {
       >
 
     <div className="p-8 bg-white">
-      <div className=" w-full mx-auto my-20 px-4 relative">
+      <div className="w-full max-w-full mx-auto my-20 px-2 sm:px-4 relative">
         <div className="relative">
           <h2 className="text-3xl font-bold text-center mb-10">
             My <span className="text-teal-600">Projects</span>
