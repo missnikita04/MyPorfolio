@@ -3,146 +3,80 @@ import { projects } from "../assets/assets";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaSquareArrowUpRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-
-function NextArrow(props) {
-  const { onClick } = props;
-  return (
-
-    // prev button 
-    <div
-      className="absolute top-1/2 right-[-40px] -translate-y-1/2 z-20 cursor-pointer"
-      onClick={onClick}
-    >
-      <button className=" !text-2xl !bg-transparent bordern-none font-bold !text-teal-600 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:!bg-teal-600 hover:!text-white transition">
-        {" "}
-        &gt;{" "}
-      </button>
-    </div>
-  );
-}
-
-function PrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute top-1/2 left-[-40px] -translate-y-1/2 z-20 cursor-pointer"
-      onClick={onClick}
-    >
-      <button className=" !text-2xl !bg-transparent bordern-none font-bold !text-teal-600 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:!bg-teal-600 hover:!text-white transition">
-        {" "}
-        &lt;{" "}
-      </button>
-    </div>
-  );
-}
-
 export default function Project() {
-     
-  var settings = {
-    dots: true, //we want dots
-    infinite: true, //how mani time scroll we set infinite time
-    speed: 500, //speedd of scrolling
-    slidesToShow: 1, ///how manu slide show in ui
-    slidesToScroll: 1, //how manu slide scroll
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
     centerPadding: "0px",
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-     adaptiveHeight: true,  // <-- recalculates slide height on small screens
-
-    //customize the dots color
-
-    // responsive: [
-    //   { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    //   { breakpoint: 640, settings: { slidesToShow: 1 } },
-    // ],
-    //  className:"p-20 bg-gray-50"\
-
-    // responsive card
-
     responsive: [
- {
-    breakpoint: 1280,
-    settings: { slidesToShow: 1, centerMode: false },
-  },
-  {
-    breakpoint: 1024,
-    settings: { slidesToShow: 1, centerMode: false },
-  },
-  {
-    breakpoint: 768,
-    settings: { slidesToShow: 1, centerMode: false },
-  },
-  {
-    breakpoint: 640,
-    settings: { slidesToShow: 1, centerMode: false },
-  },],
+      { breakpoint: 1280, settings: { slidesToShow: 1, centerMode: false } },
+      { breakpoint: 1024, settings: { slidesToShow: 1, centerMode: false } },
+      { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false } },
+      { breakpoint: 640, settings: { slidesToShow: 1, centerMode: false } },
+    ],
   };
-  return (
-     <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
-        id="project"
-        // className="min-h-screen flex items-center pt-20 pb-16 "
-      >
 
-    <div className="p-8 bg-white">
-      <div className="w-full max-w-full mx-auto my-20 px-2 sm:px-4 relative">
-        <div className="relative">
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      id="project"
+    >
+      <div className="p-8 bg-white">
+        <div className="w-full max-w-6xl mx-auto my-20 px-2 sm:px-4">
           <h2 className="text-3xl font-bold text-center mb-10">
             My <span className="text-teal-600">Projects</span>
           </h2>
 
           <Slider {...settings}>
-            {projects.map((project, idx) => {
-              return (
-                <div key={idx} className="px-2">
-                  <div className="bg-gray-50 h-[450px] text-black rounded-xl shadow-lg ">
-                    <div className="rounded-t-xl bg-white flex justify-center items-center h-56">
-                      <img
-                        src={project.image}
-                        alt="Porject-img"
-                        className="h-44 w-44 object-cover"
-                      />
-                    </div>
+            {projects.map((project, idx) => (
+              <div key={idx} className="px-2">
+                <div className="bg-gray-50 h-[450px] text-black rounded-xl shadow-lg">
+                  <div className="rounded-t-xl bg-white flex justify-center items-center h-56">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-44 w-44 object-cover rounded-full"
+                    />
+                  </div>
 
-                    <div className="flex flex-col justify-center items-center gap-4 p-4">
-                      <p className="text-xl font-semibold">{project.title}</p>
-                      <p>{project.description}</p>
+                  <div className="flex flex-col justify-center items-center gap-4 p-4 text-center">
+                    <p className="text-xl font-semibold">{project.title}</p>
+                    <p>{project.description}</p>
 
-                      {/* get link */}
-                      <div className="flex space-x-2  mb-2 ">
-                        <a className='underline text-gray-700 mt-1 hover:text-teal-500 transition' href="https://github.com/missnikita04">get the code</a>
-
-                         <a
-                        href="https://github.com/missnikita04"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="  text-gray-700 mt-2 hover:text-teal-500 transition"
-                      >
-                        <FaSquareArrowUpRight />
-                      </a>
-
-                      </div>
-                     
-                    </div>
+                    <a
+                      href={project.link || "https://github.com/missnikita04"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline text-gray-700 mt-1 hover:text-teal-500 transition"
+                    >
+                      Get the code
+                    </a>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </Slider>
-          <div className='flex justify-center mt-10' >
-<a href="https://github.com/missnikita04 " target="_blank" className=" !mt-3 !px-6 !py-2 !text-white !bg-teal-600 !rounded-lg !font-medium !border-2 !border-transparent hover:!bg-white  hover:!border-teal-500 hover:!text-gray-800 transition-colors duration-300">
-  See More
-</a>     
-     </div>
+
+          <div className="flex justify-center mt-10">
+            <a
+              href="https://github.com/missnikita04"
+              target="_blank"
+              className="px-6 py-2 text-white bg-teal-600 rounded-lg font-medium border-2 border-transparent hover:bg-white hover:border-teal-500 hover:text-gray-800 transition-colors duration-300"
+            >
+              See More
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-     </motion.div>
+    </motion.div>
   );
 }
