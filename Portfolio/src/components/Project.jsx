@@ -10,13 +10,16 @@ export default function Project() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: true,
+     autoplay: true,          // enable autoplay
+    autoplaySpeed: 2000,     // 2000ms = 2 seconds
+    pauseOnHover: false,     // continue autoplay even on hover
     centerPadding: "0px",
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 1, centerMode: false } },
-      { breakpoint: 1024, settings: { slidesToShow: 1, centerMode: false } },
+      { breakpoint: 1280, settings: { slidesToShow: 3, centerMode: false } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: false } },
       { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false } },
       { breakpoint: 640, settings: { slidesToShow: 1, centerMode: false } },
     ],

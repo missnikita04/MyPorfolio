@@ -29,8 +29,8 @@ export default function ContactForm() {
       const result = await response.json();
       if (result.success) {
         toast.success("✅ Message sent successfully!", {
-          position: "top-center",
-          autoClose: 3000,
+          // position: "top-center",
+          // autoClose: 2000,
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
@@ -98,7 +98,12 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-      <ToastContainer />
+      <ToastContainer
+       position="top-center"
+     autoClose={2000}
+     hideProgressBar={false}
+     pauseOnHover={false}
+     theme="colored" />
     </motion.div>
   );
 }
