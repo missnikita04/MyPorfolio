@@ -34,7 +34,7 @@ export default function ContactForm() {
         });
         setFormData({ name: "", email: "", message: "" });
       } else {
-        toast.error("❌ " + result.message, { position: "top-center" });
+        toast.error("❌ Server error", { autoClose: 2000 });
       }
     } catch (err) {
       toast.error("Server error: " + err.message, { position: "top-center" });
@@ -65,7 +65,9 @@ export default function ContactForm() {
                 required
                 type={field === "email" ? "email" : "text"}
                 name={field}
-                placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
+                placeholder={`Your ${
+                  field.charAt(0).toUpperCase() + field.slice(1)
+                }`}
                 value={formData[field]}
                 onChange={handleChange}
                 className="w-full border-b-2 border-teal-500 border-t-0 border-l-0 border-r-0 bg-transparent focus:outline-none focus:border-teal-600 transition py-2"
@@ -75,7 +77,9 @@ export default function ContactForm() {
 
           {/* Message */}
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Message</label>
+            <label className="block text-gray-700 font-medium mb-2">
+              Message
+            </label>
             <textarea
               required
               name="message"
@@ -98,12 +102,6 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-      <ToastContainer
-       position="top-center"
-     autoClose={2000}
-     hideProgressBar={false}
-     pauseOnHover={false}
-     theme="colored" />
     </motion.div>
   );
 }
