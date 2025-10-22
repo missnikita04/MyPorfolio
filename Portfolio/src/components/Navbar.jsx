@@ -13,13 +13,13 @@ function Navbar() {
       <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm py-2 sm:py-3 px-4 sm:px-8 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <img className=" w-30 md:w-64" src={assets.LogoImg} alt="logo..." />
+            <img className=" w-30 md:w-60" src={assets.LogoImg} alt="logo..." />
           </div>
           <div className=" hidden md:flex space-x-8">
             <Link
               to="home"
               smooth={true} duration={800}
-               offset={-80} 
+               offset={-70} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Home</span>
@@ -27,7 +27,7 @@ function Navbar() {
             <Link
               to="about"
               smooth={true} duration={800}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>About</span>
@@ -35,7 +35,7 @@ function Navbar() {
             <Link
               to="education"
               smooth={true} duration={800}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Education</span>
@@ -43,7 +43,7 @@ function Navbar() {
             <Link
               to="skills"
               smooth={true} duration={800}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Skills</span>
@@ -56,7 +56,7 @@ function Navbar() {
             </Link>
             <Link
               smooth={true} duration={800}
-               offset={-80} 
+               offset={-90} 
               to="contact"
             
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
@@ -91,7 +91,7 @@ function Navbar() {
           <div className="md:hidden mt-2 bg-gray-50 rounded-lg text-center justify-center h-1/2 p-4 flex flex-col space-y-3 hover:text-teal-600  hover:cursor-pointer hover:bg-white">
             <Link
             smooth={true} duration={900}
-             offset={-80} 
+             offset={-90} 
               onClick={() => {
                   setShowMenu(!showMenu);
                 }}
@@ -106,7 +106,7 @@ function Navbar() {
                 }}
               to="about"
               smooth={true} duration={900}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>About</span>
@@ -117,7 +117,7 @@ function Navbar() {
                 }}
               to="education"
               smooth={true} duration={900}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Education</span>
@@ -128,7 +128,7 @@ function Navbar() {
                 }}
               to="skills"
               smooth={true} duration={900}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Skills</span>
@@ -139,7 +139,7 @@ function Navbar() {
                 }}
               to="project"
               smooth={true} duration={900}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Projects</span>
@@ -150,7 +150,7 @@ function Navbar() {
                 }}
               to="contact"
               smooth={true} duration={900}
-               offset={-80} 
+               offset={-90} 
               className="relative text-black cursor-pointer transition duration-300 hover:text-teal-700 group"
             >
               <span>Contact</span>
