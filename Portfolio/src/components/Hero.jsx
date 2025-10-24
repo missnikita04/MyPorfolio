@@ -74,8 +74,9 @@ function Hero() {
             {/* Download CV Button */}
             <div className="flex justify-center md:justify-start mt-2">
               <a
-                href={assets.cv}
+                href='https://mycv-kpl9.onrender.com/'
                 download
+                target="_blank"
                 className="px-6 py-3 text-white bg-teal-600 rounded-lg font-medium border-2 border-transparent hover:bg-white hover:border-teal-500 hover:text-gray-800 transition-colors duration-300"
               >
                 Download CV
