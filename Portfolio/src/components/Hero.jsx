@@ -61,14 +61,6 @@ function Hero() {
               >
                 <FaLinkedin />
               </a>
-              <a
-                href="https://instagram.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-teal-500 transition"
-              >
-                <FaInstagram />
-              </a>
             </div>
 
             {/* Download CV Button */}
@@ -79,7 +71,7 @@ function Hero() {
                 target="_blank"
                 className="px-6 py-3 text-white bg-teal-600 rounded-lg font-medium border-2 border-transparent hover:bg-white hover:border-teal-500 hover:text-gray-800 transition-colors duration-300"
               >
-                Download CV
+                View CV
               </a>
             </div>
           </div>

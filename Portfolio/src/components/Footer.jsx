@@ -31,14 +31,6 @@ function Footer() {
           >
              <FaLinkedin />
           </a>
-          <a
-            href="https://instagram.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-teal-500 transition"
-          >
-            <FaInstagram />
-          </a>
         </div>
         <p className="text-sm text-gray-400">
           &copy; {new Date().getFullYear()} Nikita Chauhan. All rights reserved.
